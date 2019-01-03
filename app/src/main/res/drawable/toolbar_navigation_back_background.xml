@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/pnx_gray2" />
+    <corners android:radius="@dimen/toolbar_navigate_back_corner_radius" />
+</shape>

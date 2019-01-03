@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_navigate_back_corner_radius">4dp</dimen>
+    <dimen name="toolbar_navigate_back_arrow_height_and_width">32dp</dimen>
+    <dimen name="toolbar_navigate_back_arrow_apace_between_arrows">6dp</dimen>
+</resources>

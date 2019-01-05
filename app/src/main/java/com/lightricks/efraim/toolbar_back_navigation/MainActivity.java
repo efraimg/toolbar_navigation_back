@@ -16,18 +16,15 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ViewGroup viewGroup = findViewById(R.id.toolbar_navigation_back_arrow_container);
-                View view = new View(MainActivity.this);
-                int size = getResources().getDimensionPixelSize(R.dimen.toolbar_navigate_back_arrow_height_and_width);
-                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(size, size);
-                if (count++ > 0) {
-                    int space = getResources().getDimensionPixelSize(R.dimen.toolbar_navigate_back_arrow_apace_between_arrows);
-                    int margin = space - size;
-                    layoutParams.setMargins(margin, 0, 0, 0);
-                }
-                view.setLayoutParams(layoutParams);
-                view.setBackground(getDrawable(R.drawable.ic_back));
-                viewGroup.addView(view);
+                ToolbarNavigationBackView toolbarNavigationBackView = findViewById(R.id.back);
+                toolbarNavigationBackView.setNumOfArrows(toolbarNavigationBackView.getNumOfArrows() + 1);
+            }
+        });
+        findViewById(R.id.button_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToolbarNavigationBackView toolbarNavigationBackView = findViewById(R.id.back);
+                toolbarNavigationBackView.setNumOfArrows(toolbarNavigationBackView.getNumOfArrows() - 1);
             }
         });
     }
